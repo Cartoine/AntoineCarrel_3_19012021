@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "title";
+  src: url("fonts/Shrikhand/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: "texte";
+  src: url("fonts/Roboto/Roboto-Black.ttf");
+}
 body {
   background: #635e5e;
 }
