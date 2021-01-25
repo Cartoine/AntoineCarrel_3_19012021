@@ -1,7 +1,5 @@
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$title-padding: 0% 10% 0% 10%;
+@import "abstracts/variables";
+// @import "abstracts/mixins";
 
 @font-face {
   font-family: "title";
@@ -23,9 +21,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   height: 10vh;
-  -webkit-box-shadow: 0px 1px 12px 0px rgba(135, 135, 135, 1);
-  -moz-box-shadow: 0px 1px 12px 0px rgba(135, 135, 135, 1);
-  box-shadow: 0px 1px 12px 0px rgba(135, 135, 135, 1);
+  box-shadow: $shadow-header;
 }
 
 form {
@@ -35,20 +31,25 @@ form {
 }
 
 input {
+  width: 50%;
   background-image: url("img/icn/map-marker-alt-solid.svg");
   background-repeat: no-repeat;
-  background-position: left;
+  background-position-y: center;
+  background-position-x: 15px;
   background-size: 15px;
   height: 50px;
-  padding-left: 35px;
+  text-align: center;
   background-color: transparent;
   border: none;
+  font-size: 5vw;
+  outline: none;
 }
 
 input::placeholder {
   font-family: texte;
   font-size: 5vw;
   font-weight: 900;
+  width: 80%;
   color: #000000;
 }
 
@@ -79,10 +80,19 @@ input::placeholder {
     width: 50%;
     background-color: $color-secondary;
     border: none;
-    height: 50px;
+    height: 60px;
     border-radius: 30px;
     color: #fff;
     font-weight: 600;
     background: linear-gradient(-10deg, $color-primary, 60%, $color-secondary);
+    box-shadow: $shadow-btn;
+  }
+  button:hover {
+    box-shadow: none;
+    cursor: pointer;
+  }
+  button:focus {
+    outline: none;
+    box-shadow: none;
   }
 }
