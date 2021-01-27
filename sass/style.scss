@@ -162,10 +162,12 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 20%;
+  padding-bottom: 20%;
 }
 
 .cardContainer {
-  background-color: $color-primary;
+  background-color: $background-color;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -236,4 +238,26 @@ h2 {
   img {
     width: 30%;
   }
+}
+footer {
+  background-color: #353535;
+  color: #fff;
+  font-family: "texte";
+  padding-left: 5%;
+  padding-top: 5%;
+
+  section {
+    display: flex;
+
+    p {
+      margin-left: 10px;
+    }
+  }
+  svg {
+    fill: #fff;
+    width: 3%;
+  }
+}
+.test {
+  width: 3%;
 }
