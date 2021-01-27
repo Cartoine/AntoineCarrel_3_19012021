@@ -16,13 +16,14 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   height: 10vh;
-  box-shadow: 0px 2px 5px 2px rgba(105, 105, 105, 0.4);
+  z-index: 1000;
+  box-shadow: 0px 2px 5px 2px rgba(105, 105, 105, 0.808);
 }
 
 form {
   display: flex;
   justify-content: center;
-  background-color: rgba(184, 184, 184, 0.24);
+  background-color: #eaeaeac2;
 }
 
 input {
@@ -49,7 +50,7 @@ input::placeholder {
 }
 
 .booking {
-  background-color: rgba(201, 201, 201, 0.466);
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,6 +89,63 @@ input::placeholder {
 .booking button:focus {
   outline: none;
   box-shadow: none;
+}
+
+h2 {
+  font-family: "texte";
+  font-weight: bold;
+  font-size: 6vw;
+  margin-left: 6%;
+}
+
+.stepContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  height: 60vh;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+}
+.steps img {
+  width: 30px;
+  height: 30px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "texte";
+  margin-left: -15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  background-color: #9356dc;
+}
+
+.operation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.operation .operationTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  font-family: "texte";
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */
