@@ -154,17 +154,25 @@ h2 {
     font-size: 18px;
   }
 }
+
 // restaurants container
 .restauContainer {
   background-color: $background-color;
-  // // display: inline;
-  // justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
+  // // height: 500px;
+  // align-content: space-between;
+  // height: 500%;
 }
 
 .cardContainer {
   background-color: $background-color;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cardRestau {
