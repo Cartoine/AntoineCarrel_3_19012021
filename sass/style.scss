@@ -158,27 +158,26 @@ h2 {
 // restaurants container
 .restauContainer {
   background-color: $background-color;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  // align-items: center;
-  // // height: 500px;
-  // align-content: space-between;
-  // height: 500%;
+  height: 250vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardContainer {
-  background-color: $background-color;
+  background-color: $color-primary;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .cardRestau {
   background-color: #fff;
   display: inline-block;
   width: 85%;
+  max-width: 85%;
   border-radius: 15px;
 
   img {

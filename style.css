@@ -150,20 +150,26 @@ h2 {
 
 .restauContainer {
   background-color: #f6f6f6;
+  height: 250vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardContainer {
-  background-color: #f6f6f6;
+  background-color: #9356dc;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .cardRestau {
   background-color: #fff;
   display: inline-block;
   width: 85%;
+  max-width: 85%;
   border-radius: 15px;
 }
 .cardRestau img {
