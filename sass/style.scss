@@ -24,8 +24,18 @@ header {
   height: 10vh;
   z-index: 1000;
   box-shadow: $shadow-header;
-}
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
 
+  img {
+    width: 20px;
+  }
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
 form {
   display: flex;
   justify-content: center;
@@ -63,7 +73,7 @@ input::placeholder {
   padding-bottom: 10%;
 
   h1 {
-    font-family: texte;
+    font-family: "texte";
     font-size: 6vw;
     font-weight: bolder;
     text-align: center;
@@ -78,25 +88,26 @@ input::placeholder {
     color: rgba(135, 135, 135, 1);
     padding: $title-padding;
   }
-  button {
-    width: 50%;
-    background-color: $color-secondary;
-    border: none;
-    height: 60px;
-    border-radius: 30px;
-    color: #fff;
-    font-weight: 600;
-    background: linear-gradient(-10deg, $color-primary, 60%, $color-secondary);
-    box-shadow: $shadow-btn;
-  }
-  button:hover {
-    box-shadow: none;
-    cursor: pointer;
-  }
-  button:focus {
-    outline: none;
-    box-shadow: none;
-  }
+}
+
+button {
+  width: 50%;
+  background-color: $color-secondary;
+  border: none;
+  height: 60px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(-10deg, $color-primary, 60%, $color-secondary);
+  box-shadow: $shadow-btn;
+}
+button:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 h2 {
@@ -276,4 +287,92 @@ footer {
   .containerText {
     margin-top: -10px;
   }
+}
+
+// templates
+.imgContainer img {
+  width: 100%;
+}
+.tilde {
+  border-bottom: 3px solid $color-tertiary;
+  width: 60px;
+  border-width: 5px;
+  margin-left: 0px;
+}
+
+.menuContainer {
+  background-color: $background-color;
+  margin-top: -60px;
+  position: relative;
+  height: 180vh;
+  border-radius: 50px 50px 0px 0px;
+  padding: 5%;
+
+  h1 {
+    font-family: "title";
+    font-size: 30px;
+  }
+
+  h3 {
+    font-family: "texte";
+  }
+  p {
+    font-family: "texte";
+  }
+}
+.titleMenu {
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 30px;
+  }
+}
+.containerChoise {
+  // background-color: burlywood;
+  height: 35vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.choise {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 0% 5%;
+  display: flex;
+
+  .containerOrder {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+  .inlineText {
+    margin-top: -30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .check {
+    width: 30px;
+  }
+  .checkIt {
+    display: none;
+  }
+}
+.choise:hover .checkIt {
+  // height: 100%;
+  width: 100%;
+  display: block;
+  background-color: $color-tertiary;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin-right: -25px;
+  border-radius: 0px 15px 15px 0px;
+  margin-left: 40px;
+}
+
+.btnOrder {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
 }
