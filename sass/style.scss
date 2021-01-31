@@ -20,6 +20,7 @@ header {
   background-image: url("img/logo/ohmyfood.png"); //change PNG on svg
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 40%;
   height: 10vh;
   z-index: 1000;
   box-shadow: $shadow-header;
@@ -185,6 +186,7 @@ h2 {
   img {
     width: 100%;
     border-radius: 15px 15px 0px 0px;
+    border-style: none;
   }
 }
 
@@ -192,11 +194,11 @@ h2 {
   position: absolute;
   background-color: #99e2d0;
   right: 0;
-  // height: 50px;
+  height: 35px;
   padding: 0px 25px;
   margin-right: 12vw;
   margin-top: 20px;
-  border-radius: 5px;
+  border-radius: 3px;
 
   p {
     color: #008766;
@@ -204,6 +206,7 @@ h2 {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+    margin-top: 5px;
   }
 }
 
@@ -231,7 +234,6 @@ h2 {
 .like {
   width: 30%;
   display: flex;
-  // background-color: red;
   justify-content: center;
   align-items: center;
 
@@ -241,23 +243,37 @@ h2 {
 }
 footer {
   background-color: #353535;
+  padding-top: 10%;
+  padding-bottom: 0%;
+  padding-left: 5%;
+  display: flex;
+  align-content: center;
+}
+
+.footerContainer {
   color: #fff;
   font-family: "texte";
-  padding-left: 5%;
-  padding-top: 5%;
+  display: inline;
+  align-content: flex-start;
 
-  section {
+  .logoFooter {
+    width: 60%;
+    margin-bottom: 15px;
+  }
+
+  .containerPicto {
     display: flex;
+    align-items: center;
+    height: 15%;
+  }
+  .picto {
+    width: 15px;
+  }
+  .textPicto {
+    margin-left: 12px;
+  }
 
-    p {
-      margin-left: 10px;
-    }
+  .containerText {
+    margin-top: -10px;
   }
-  svg {
-    fill: #fff;
-    width: 3%;
-  }
-}
-.test {
-  width: 3%;
 }
