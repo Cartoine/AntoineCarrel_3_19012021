@@ -1,5 +1,5 @@
 @import "abstracts/variables";
-// @import "abstracts/mixins";
+@import "abstracts/mixins";
 
 @font-face {
   font-family: "title";
@@ -170,7 +170,7 @@ h2 {
 // restaurants container
 .restauContainer {
   background-color: $background-color;
-  height: 250vh;
+  // height: ;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -193,6 +193,8 @@ h2 {
   width: 85%;
   max-width: 85%;
   border-radius: 15px;
+  margin-top: 20px;
+  @include fadeIn;
 
   img {
     width: 100%;
@@ -293,6 +295,7 @@ footer {
 .imgContainer img {
   width: 100%;
 }
+
 .tilde {
   border-bottom: 3px solid $color-tertiary;
   width: 60px;
@@ -316,10 +319,12 @@ footer {
   h3 {
     font-family: "texte";
   }
+
   p {
     font-family: "texte";
   }
 }
+
 .titleMenu {
   display: flex;
   justify-content: space-between;
@@ -327,6 +332,7 @@ footer {
     width: 30px;
   }
 }
+
 .containerChoise {
   // background-color: burlywood;
   height: 35vh;
@@ -346,18 +352,22 @@ footer {
     display: flex;
     flex-flow: column;
   }
+
   .inlineText {
     margin-top: -30px;
     display: flex;
     justify-content: space-between;
   }
+
   .check {
     width: 30px;
   }
+
   .checkIt {
     display: none;
   }
 }
+
 .choise:hover .checkIt {
   // height: 100%;
   width: 100%;
