@@ -212,7 +212,7 @@ h2 {
   color: #9356dc;
 }
 
-.restauContainer {
+.restauTitle {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
@@ -356,9 +356,7 @@ footer {
   background-color: #f6f6f6;
   margin-top: -60px;
   position: relative;
-  height: 180vh;
   border-radius: 50px 50px 0px 0px;
-  padding: 5%;
 }
 .menuContainer h2 {
   font-family: "title";
@@ -374,13 +372,28 @@ footer {
 .titleMenu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
-.titleMenu img {
-  width: 30px;
+.titleMenu i {
+  margin-right: 30px;
+}
+
+.blockMenuContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.blockMenuContent .blockMenu {
+  width: 390px;
+  margin: 0px 10px;
+}
+.blockMenuContent .blockDish {
+  width: 30%;
+  background-color: saddlebrown;
 }
 
 .containerChoise {
-  height: 35vh;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -390,6 +403,7 @@ footer {
   background-color: #fff;
   border-radius: 15px;
   padding: 0% 5%;
+  margin-top: 10px;
   display: flex;
 }
 .choise .containerOrder {
@@ -397,28 +411,50 @@ footer {
   display: flex;
   flex-flow: column;
 }
-.choise .inlineText {
-  margin-top: -30px;
-  display: flex;
-  justify-content: space-between;
-}
-.choise .check {
+
+.check {
   width: 30px;
 }
-.choise .checkIt {
+
+.checkIt {
   display: none;
 }
 
 .choise:hover .checkIt {
-  width: 100%;
-  display: block;
-  background-color: #99e2d0;
-  width: 20%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-right: -25px;
+  margin-left: 0px;
+  max-width: 90px;
+  min-width: 90px;
+  width: 90px;
+  z-index: 100;
   border-radius: 0px 15px 15px 0px;
-  margin-left: 40px;
+  background-color: #99e2d0;
+}
+
+.inlineText {
+  margin-top: -30px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.elips {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.elipsTitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
 }
 
 .btnOrder {
@@ -458,7 +494,7 @@ footer {
     font-size: 3vw;
   }
 
-  .restauContainer {
+  .restauTitle {
     margin-top: 4vh;
     padding-bottom: 40px;
   }
@@ -608,46 +644,15 @@ footer {
     width: 30px;
   }
 
+  .blockMenu {
+    min-width: 100%;
+    margin: 0px 0px;
+  }
+
   .containerChoise {
-    height: 35vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-  }
-
-  .choise {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 0% 5%;
-    display: flex;
-  }
-  .choise .containerOrder {
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-  }
-  .choise .inlineText {
-    margin-top: -30px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .choise .check {
-    width: 30px;
-  }
-  .choise .checkIt {
-    display: none;
-  }
-
-  .choise:hover .checkIt {
-    width: 100%;
-    display: block;
-    background-color: #99e2d0;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    margin-right: -25px;
-    border-radius: 0px 15px 15px 0px;
-    margin-left: 40px;
   }
 
   .btnOrder {

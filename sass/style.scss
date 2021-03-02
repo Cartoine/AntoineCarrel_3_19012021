@@ -239,7 +239,7 @@ h2 {
   color: $color-primary;
 }
 // restaurants container
-.restauContainer {
+.restauTitle {
   background-color: $background-color;
   display: flex;
   flex-direction: column;
@@ -387,9 +387,9 @@ footer {
   background-color: $background-color;
   margin-top: -60px;
   position: relative;
-  height: 180vh;
+  // height: 180vh;
   border-radius: 50px 50px 0px 0px;
-  padding: 5%;
+  // padding: 5%;
 
   h2 {
     font-family: "title";
@@ -408,14 +408,34 @@ footer {
 .titleMenu {
   display: flex;
   justify-content: space-between;
-  img {
-    width: 30px;
+  align-items: center;
+  align-content: center;
+
+  i {
+    margin-right: 30px;
+  }
+}
+.blockMenuContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // background-color: royalblue;
+
+  .blockMenu {
+    // background-color: red;
+    width: 390px;
+    // min-width: 100%;
+    // max-width: 500px;
+    margin: 0px 10px;
+  }
+  .blockDish {
+    width: 30%;
+    background-color: saddlebrown;
   }
 }
 
 .containerChoise {
-  // background-color: burlywood;
-  height: 35vh;
+  // height: 35vh;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -425,41 +445,69 @@ footer {
   background-color: #fff;
   border-radius: 15px;
   padding: 0% 5%;
+  margin-top: 10px;
   display: flex;
+  // width: 30%;
 
   .containerOrder {
     width: 100%;
     display: flex;
     flex-flow: column;
   }
+}
+.check {
+  width: 30px;
+  // background-color: saddlebrown;
+}
 
-  .inlineText {
-    margin-top: -30px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .check {
-    width: 30px;
-  }
-
-  .checkIt {
-    display: none;
-  }
+.checkIt {
+  display: none;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // margin-right: -25px;
+  // margin-left: 40px;
+  // width: 90px;
+  // border-radius: 0px 15px 15px 0px;
+  // background-color: saddlebrown;
 }
 
 .choise:hover .checkIt {
-  // height: 100%;
-  width: 100%;
-  display: block;
-  background-color: $color-tertiary;
-  width: 20%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-right: -25px;
+  margin-left: 0px;
+  max-width: 90px;
+  min-width: 90px;
+  width: 90px;
+  z-index: 100;
+  // position: absolute;
   border-radius: 0px 15px 15px 0px;
-  margin-left: 40px;
+  background-color: $color-tertiary;
 }
+.inlineText {
+  margin-top: -30px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+//Animated Ellippsis
+.elips {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+.elipsTitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
+}
+
 .btnOrder {
   margin-top: 10%;
   display: flex;
@@ -504,7 +552,7 @@ footer {
   }
 
   // restaurants container
-  .restauContainer {
+  .restauTitle {
     margin-top: 4vh;
     padding-bottom: 40px;
   }
@@ -660,54 +708,40 @@ footer {
       width: 30px;
     }
   }
-
+  .blockMenu {
+    // background-color: red;
+    // width: 390px;
+    min-width: 100%;
+    // max-width: 500px;
+    margin: 0px 0px;
+  }
   .containerChoise {
     // background-color: burlywood;
-    height: 35vh;
+    // height: 35vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
   }
 
-  .choise {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 0% 5%;
-    display: flex;
+  // .choise {
+  //   background-color: #fff;
+  //   border-radius: 15px;
+  //   padding: 0% 5%;
+  //   display: flex;
 
-    .containerOrder {
-      width: 100%;
-      display: flex;
-      flex-flow: column;
-    }
+  // .containerOrder {
+  //   width: 100%;
+  //   display: flex;
+  //   flex-flow: column;
+  // }
 
-    .inlineText {
-      margin-top: -30px;
-      display: flex;
-      justify-content: space-between;
-    }
+  // .inlineText {
+  //   margin-top: -30px;
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+  // }
 
-    .check {
-      width: 30px;
-    }
-
-    .checkIt {
-      display: none;
-    }
-  }
-
-  .choise:hover .checkIt {
-    // height: 100%;
-    width: 100%;
-    display: block;
-    background-color: $color-tertiary;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    margin-right: -25px;
-    border-radius: 0px 15px 15px 0px;
-    margin-left: 40px;
-  }
   .btnOrder {
     margin-top: 10%;
     display: flex;
