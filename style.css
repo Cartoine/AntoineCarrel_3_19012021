@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -53,11 +52,6 @@ form .inputContainer {
 form img {
   width: 20px;
 }
-form .inputContaint  {
-  font-size: 50px;
-  background-color: red;
-  color: red;
-}
 form .inputContaint:active {
   outline-style: none;
 }
@@ -70,13 +64,6 @@ form input {
   outline: 0 none;
   border: 0 none;
 }
-form input:focus {
-  outline: 0 none;
-  border: 0 none;
-}
-form input:-moz-focusring {
-  outline: 2px solid rebeccapurple;
-}
 
 .booking {
   background-color: #f6f6f6;
@@ -87,14 +74,14 @@ form input:-moz-focusring {
 }
 .booking h2 {
   font-family: "texte";
-  font-size: 6vw;
+  font-size: 3vw;
   font-weight: bolder;
   text-align: center;
   padding: 0% 10% 0% 10%;
 }
 .booking p {
   font-family: texte;
-  font-size: 4vw;
+  font-size: 2vw;
   font-weight: 100;
   text-align: center;
   color: #878787;
@@ -113,7 +100,7 @@ button {
   box-shadow: 0px 5px 5px 2px rgba(105, 105, 105, 0.2);
 }
 
-button:hover {
+button:hover, button:active {
   box-shadow: none;
   cursor: pointer;
 }
@@ -125,32 +112,36 @@ button:focus {
 
 h2 {
   font-family: "texte";
+  text-align: center;
   font-weight: bold;
-  font-size: 6vw;
+  font-size: 3vw;
   margin-left: 6%;
 }
 
 .stepContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
   align-items: center;
-  align-content: space-between;
-  height: 60vh;
 }
 
 .steps {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  width: 85%;
-  height: 100px;
+  width: 30vw;
+  margin-left: 30px;
   border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color: #f6f6f6;
 }
-.steps img {
-  width: 30px;
-  height: 30px;
+.steps:hover, .steps:active {
+  background-color: #9256dc34;
+}
+.steps .operation {
+  width: 100%;
 }
 
 .circle {
@@ -166,18 +157,22 @@ h2 {
   background-color: #9356dc;
 }
 
-.operation {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.operation .operationTitle {
+.operationTitle {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+  min-width: 100%;
+  margin-left: 20px;
+}
+.operationTitle img {
+  width: 15px;
+}
+.operationTitle h3 {
   font-family: "texte";
-  font-size: 18px;
+  font-size: 1.4vw;
+  text-align: start;
+  width: 90%;
+  margin-left: 20px;
 }
 
 .restauContainer {
@@ -185,26 +180,27 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 20%;
-  padding-bottom: 20%;
+  margin-top: 10vh;
+  padding-bottom: 20px;
 }
 
 .cardContainer {
   background-color: #f6f6f6;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  height: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .cardRestau {
   background-color: #fff;
   display: inline-block;
-  width: 85%;
-  max-width: 85%;
+  width: 35%;
   border-radius: 15px;
-  margin-top: 20px;
+  margin: 20px;
   -webkit-transition: opacity 2s ease-in;
   -ms-transition: opacity 2s ease-in;
   -moz-transition: opacity 2s ease-in;
@@ -225,7 +221,7 @@ h2 {
   right: 0;
   height: 35px;
   padding: 0px 25px;
-  margin-right: 12vw;
+  margin-right: 17vw;
   margin-top: 20px;
   border-radius: 3px;
 }
@@ -248,21 +244,29 @@ h2 {
 }
 .cardText h3 {
   font-family: "texte";
-  font-size: 28px;
+  font-size: 20px;
 }
 .cardText p {
   font-family: "texte";
-  font-size: 18px;
+  font-size: 12px;
+}
+
+.fa-heart {
+  font-size: 40px;
+}
+
+.fa-heart:hover {
+  font-weight: 900;
+  background: linear-gradient(90deg, #ff79da 0%, #9356dc 62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .like {
-  width: 30%;
+  width: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.like img {
-  width: 30%;
 }
 
 footer {
@@ -386,105 +390,45 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  form {
-    background-color: #eaeaeac2;
-  }
-  form .inputContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  form img {
-    width: 20px;
-  }
-  form .inputContaint  {
-    font-size: 50px;
-    background-color: red;
-    color: red;
-  }
   form input {
     width: 40%;
-    height: 70px;
-    text-align: center;
-    background-color: transparent;
-    border: none;
     font-size: 5vw;
-    outline: none;
+  }
+
+  .booking h2 {
+    font-size: 6vw;
+  }
+  .booking p {
+    font-size: 4vw;
   }
 
   h2 {
-    font-family: "texte";
-    font-weight: bold;
+    text-align: left;
     font-size: 6vw;
-    margin-left: 6%;
   }
 
   .stepContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    align-content: space-between;
-    height: 60vh;
-  }
-
-  .steps {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 85%;
-    height: 100px;
-    border-radius: 20px;
-    background-color: #f6f6f6;
-  }
-  .steps img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .circle {
-    display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-family: "texte";
-    margin-left: -15px;
-    width: 35px;
-    height: 35px;
-    border-radius: 30px;
-    background-color: #9356dc;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
-
-  .operation {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  .stepContainer .steps {
+    width: 85%;
   }
-  .operation .operationTitle {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    font-family: "texte";
-    font-size: 18px;
+  .stepContainer h3 {
+    font-size: 3vw;
   }
 
   .restauContainer {
-    background-color: #f6f6f6;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 20%;
-    padding-bottom: 20%;
+    margin-top: 4vh;
+    padding-bottom: 40px;
   }
 
   .cardContainer {
-    background-color: #f6f6f6;
-    display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    align-items: center;
-    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .cardRestau {
