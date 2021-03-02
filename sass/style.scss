@@ -102,6 +102,34 @@ form {
     color: rgba(135, 135, 135, 1);
     padding: $title-padding;
   }
+
+  .btnAnchor {
+    width: 50%;
+    background-color: $color-secondary;
+    font-family: "texte";
+    text-align: center;
+    vertical-align: middle;
+    line-height: 55px;
+    border: none;
+    height: 60px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(-10deg, $color-primary, 60%, $color-secondary);
+    box-shadow: $shadow-btn;
+  }
+
+  .btnAnchor {
+    &:hover,
+    &:active {
+      box-shadow: none;
+      cursor: pointer;
+    }
+  }
+  .btnAnchor:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
 button {
