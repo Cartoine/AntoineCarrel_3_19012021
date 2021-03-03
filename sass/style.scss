@@ -10,7 +10,10 @@
   font-family: "texte";
   src: url("fonts/Roboto/Roboto-Regular.ttf");
 }
-
+@font-face {
+  font-family: "textBold";
+  src: url("fonts/Roboto/Roboto-Bold.ttf");
+}
 body {
   margin: 0px;
 }
@@ -39,8 +42,6 @@ header {
 }
 
 form {
-  // display: flex;
-  // justify-content: center;
   background-color: #eaeaeac2;
 
   .inputContainer {
@@ -53,11 +54,6 @@ form {
     width: 20px;
   }
 
-  // .inputContaint  {
-  //   font-size: 50px;
-  //   background-color: red;
-  //   color: red;
-  // }
   .inputContaint:active {
     outline-style: none;
   }
@@ -70,13 +66,6 @@ form {
     outline: 0 none;
     border: 0 none;
   }
-  // input:focus {
-  //   outline: 0 none;
-  //   border: 0 none;
-  // }
-  // input:-moz-focusring {
-  //   outline: 2px solid rebeccapurple;
-  // }
 }
 
 .booking {
@@ -218,19 +207,18 @@ h2 {
   }
 
   h3 {
-    font-family: "texte";
+    font-family: "textBold";
     font-size: 1.4vw;
     text-align: start;
     width: 90%;
-    margin-left: 20px;
+    // margin-left: 20px;
   }
 }
 //style hover steps for icon
 .iconeHover {
   width: 100%;
   height: 35px;
-  margin-right: -100%;
-  padding-right: 20px;
+  margin-right: -80%;
   padding-top: 20px;
   position: unset;
   z-index: 1;
@@ -255,17 +243,14 @@ h2 {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  // height: 100%;
   padding-left: 40px;
   padding-right: 40px;
-  // background-color: red;
 }
 
 .cardRestau {
   background-color: #fff;
   display: inline-block;
   width: 40%;
-  // max-width: %;
   border-radius: 15px;
   margin: 20px;
   @include fadeIn;
@@ -298,7 +283,6 @@ h2 {
 }
 
 .cardText {
-  // background-color: blue;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -387,9 +371,7 @@ footer {
   background-color: $background-color;
   margin-top: -60px;
   position: relative;
-  // height: 180vh;
   border-radius: 50px 50px 0px 0px;
-  // padding: 5%;
 
   h2 {
     font-family: "title";
@@ -419,13 +401,9 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  // background-color: royalblue;
 
   .blockMenu {
-    // background-color: red;
     width: 390px;
-    // min-width: 100%;
-    // max-width: 500px;
     margin: 0px 10px;
   }
   .blockDish {
@@ -435,84 +413,78 @@ footer {
 }
 
 .containerChoise {
-  // height: 35vh;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
 }
 
 .choise {
-  background-color: #fff;
+  margin-top: 20px;
   border-radius: 15px;
-  padding: 0% 5%;
-  margin-top: 10px;
+  background-color: #fff;
   display: flex;
-  // width: 30%;
+  align-content: center;
 
+  h3,
+  p {
+    margin: 5px;
+  }
   .containerOrder {
     width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .inlineText {
     display: flex;
-    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  .elips {
+    text-overflow: ellipsis;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
   }
 }
-.check {
-  width: 30px;
-  // background-color: saddlebrown;
+
+.choise:hover {
+  .checkIt {
+    background-color: $color-tertiary;
+    width: 20%;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .check {
+    width: 30px;
+    height: 30px;
+  }
+  .containerOrder {
+    width: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
-.checkIt {
-  display: none;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // margin-right: -25px;
-  // margin-left: 40px;
-  // width: 90px;
-  // border-radius: 0px 15px 15px 0px;
-  // background-color: saddlebrown;
-}
-
-.choise:hover .checkIt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: -25px;
-  margin-left: 0px;
-  max-width: 90px;
-  min-width: 90px;
-  width: 90px;
-  z-index: 100;
-  // position: absolute;
-  border-radius: 0px 15px 15px 0px;
-  background-color: $color-tertiary;
-}
-.inlineText {
-  margin-top: -30px;
-  margin-right: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-//Animated Ellippsis
 .elips {
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: nowrap !important;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 80%;
-}
-.elipsTitle {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 90%;
+  display: block;
 }
 
 .btnOrder {
-  margin-top: 10%;
   display: flex;
   justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: $background-color;
 }
+
 @media screen and (max-width: 768px) {
   form {
     input {
@@ -547,7 +519,7 @@ footer {
     }
 
     h3 {
-      font-size: 3vw;
+      font-size: 3.5vw;
     }
   }
 
@@ -570,7 +542,6 @@ footer {
     max-width: 85%;
     border-radius: 15px;
     margin-top: 20px;
-    @include fadeIn;
 
     img {
       width: 100%;
@@ -683,7 +654,6 @@ footer {
     background-color: $background-color;
     margin-top: -60px;
     position: relative;
-    height: 180vh;
     border-radius: 50px 50px 0px 0px;
     padding: 5%;
 
@@ -709,42 +679,19 @@ footer {
     }
   }
   .blockMenu {
-    // background-color: red;
-    // width: 390px;
     min-width: 100%;
-    // max-width: 500px;
     margin: 0px 0px;
   }
   .containerChoise {
-    // background-color: burlywood;
-    // height: 35vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
   }
 
-  // .choise {
-  //   background-color: #fff;
-  //   border-radius: 15px;
-  //   padding: 0% 5%;
-  //   display: flex;
-
-  // .containerOrder {
-  //   width: 100%;
-  //   display: flex;
-  //   flex-flow: column;
-  // }
-
-  // .inlineText {
-  //   margin-top: -30px;
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
-  // }
-
-  .btnOrder {
-    margin-top: 10%;
-    display: flex;
-    justify-content: center;
+  .choise {
+    h3,
+    p {
+      margin: 10px;
+    }
   }
 }
