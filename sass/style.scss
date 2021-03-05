@@ -253,7 +253,6 @@ h2 {
   width: 40%;
   border-radius: 15px;
   margin: 20px;
-  @include fadeIn;
 
   img {
     width: 100%;
@@ -424,57 +423,82 @@ footer {
   background-color: #fff;
   display: flex;
   align-content: center;
+}
 
+.choise {
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  display: flex;
+  align-content: center;
   h3,
   p {
     margin: 5px;
   }
+
   .containerOrder {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  .elips {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70%;
+  }
+
   .inlineText {
     display: flex;
     justify-content: space-between;
   }
-
-  .elips {
-    text-overflow: ellipsis;
-    white-space: nowrap !important;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
+  .checkIt {
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .check {
+    width: 3px;
+    height: 3px;
+    margin-left: -50px;
+    // display: none;
   }
 }
 
 .choise:hover {
+  // .inlineText {
+  //   width: 80%;
+  // }
   .checkIt {
-    background-color: $color-tertiary;
     width: 20%;
+    background-color: $color-tertiary;
     border-radius: 0px 15px 15px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    animation: slide 0.2s linear;
   }
   .check {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    margin-left: 0px;
+    // display: inline-block;
+    animation: turn 0.4s reverse linear;
   }
-  .containerOrder {
-    width: 80%;
-    padding-left: 10px;
-    padding-right: 10px;
+  @keyframes slide {
+    from {
+      width: 0%;
+    }
+    to {
+      min-width: 50px;
+    }
   }
-}
-
-.elips {
-  text-overflow: ellipsis;
-  white-space: nowrap !important;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
+  @keyframes turn {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
 }
 
 .btnOrder {
