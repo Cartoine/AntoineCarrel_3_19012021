@@ -139,6 +139,23 @@ button:focus {
   box-shadow: none;
 }
 
+// Animation
+.fadeinOne {
+  @include fadeinOne;
+}
+
+.fadeinTwo {
+  @include fadeinTwo;
+}
+
+.fadeinThree {
+  @include fadeinThree;
+}
+
+.fadeinFour {
+  @include fadeinFour;
+}
+
 .working {
   font-family: Roboto;
   // text-align: center;
@@ -209,6 +226,7 @@ button:focus {
     // margin-left: 20px;
   }
 }
+
 //style hover steps for icon
 .iconeHover {
   width: 100%;
@@ -218,9 +236,11 @@ button:focus {
   position: unset;
   z-index: 1;
 }
+
 .steps .iconeHover:hover {
   color: $color-primary;
 }
+
 // restaurants container
 .restauTitle {
   font-family: Roboto;
@@ -230,6 +250,11 @@ button:focus {
   justify-content: space-between;
   margin-top: 10vh;
   padding-bottom: 20px;
+
+  h2 {
+    font-size: 3vw;
+    text-align: center;
+  }
 }
 
 .cardContainer {
@@ -419,18 +444,11 @@ footer {
 .choise {
   margin-top: 20px;
   border-radius: 15px;
-  background-color: #fff;
-  display: flex;
-  align-content: center;
-}
-
-.choise {
-  margin-top: 20px;
-  border-radius: 15px;
   padding-left: 10px;
   background-color: #fff;
   display: flex;
   align-content: center;
+
   h3 {
     margin-top: 5px;
     margin-bottom: 0px;
@@ -542,7 +560,9 @@ footer {
 
   // restaurants container
   .restauTitle h2 {
-    margin-left: 40px;
+    font-size: 6vw;
+    margin-left: 50px;
+    text-align: start;
   }
 
   .cardContainer {

@@ -10,6 +10,26 @@
   animation: containeur 0.4s linear;
 }
 
+@mixin fadeinOne {
+  animation: fadeinOne 2s;
+  animation-delay: 0.5s;
+}
+
+@mixin fadeinTwo {
+  animation: fadeinTwo 2s;
+  animation-delay: 1s;
+}
+
+@mixin fadeinThree {
+  animation: fadeinThree 2s;
+  animation-delay: 1.5s;
+}
+
+@mixin fadeinFour {
+  animation: fadeinFour 2s;
+  animation-delay: 2s;
+}
+
 @keyframes slide {
   from {
     width: 0%;
@@ -31,5 +51,41 @@
   }
   to {
     width: -50px;
+  }
+}
+
+@keyframes fadeinOne {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinTwo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinThree {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinFour {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

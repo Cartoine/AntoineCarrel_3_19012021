@@ -20,6 +20,38 @@
     width: -50px;
   }
 }
+@keyframes fadeinOne {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeinTwo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeinThree {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeinFour {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "title";
   src: url("fonts/Shrikhand/Shrikhand-Regular.ttf");
@@ -143,6 +175,26 @@ button:focus {
   box-shadow: none;
 }
 
+.fadeinOne {
+  animation: fadeinOne 2s;
+  animation-delay: 0.5s;
+}
+
+.fadeinTwo {
+  animation: fadeinTwo 2s;
+  animation-delay: 1s;
+}
+
+.fadeinThree {
+  animation: fadeinThree 2s;
+  animation-delay: 1.5s;
+}
+
+.fadeinFour {
+  animation: fadeinFour 2s;
+  animation-delay: 2s;
+}
+
 .working {
   font-family: Roboto;
   font-weight: 700;
@@ -228,6 +280,10 @@ button:focus {
   justify-content: space-between;
   margin-top: 10vh;
   padding-bottom: 20px;
+}
+.restauTitle h2 {
+  font-size: 3vw;
+  text-align: center;
 }
 
 .cardContainer {
@@ -406,14 +462,6 @@ footer {
 .choise {
   margin-top: 20px;
   border-radius: 15px;
-  background-color: #fff;
-  display: flex;
-  align-content: center;
-}
-
-.choise {
-  margin-top: 20px;
-  border-radius: 15px;
   padding-left: 10px;
   background-color: #fff;
   display: flex;
@@ -518,7 +566,9 @@ footer {
   }
 
   .restauTitle h2 {
-    margin-left: 40px;
+    font-size: 6vw;
+    margin-left: 50px;
+    text-align: start;
   }
 
   .cardContainer {
