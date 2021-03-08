@@ -1,19 +1,12 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 @font-face {
   font-family: "title";
   src: url("fonts/Shrikhand/Shrikhand-Regular.ttf");
 }
 
-@font-face {
-  font-family: "texte";
-  src: url("fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: "textBold";
-  src: url("fonts/Roboto/Roboto-Bold.ttf");
-}
 body {
   margin: 0px;
 }
@@ -76,17 +69,18 @@ form {
   padding-bottom: 10%;
 
   h2 {
-    font-family: "texte";
+    font-family: Roboto;
     font-size: 3vw;
-    font-weight: bolder;
+    font-weight: 500;
     text-align: center;
+    // color: red;
     padding: $title-padding;
   }
 
   p {
-    font-family: texte;
+    font-family: Roboto;
     font-size: 2vw;
-    font-weight: 100;
+    font-weight: 400;
     text-align: center;
     color: rgba(135, 135, 135, 1);
     padding: $title-padding;
@@ -95,7 +89,8 @@ form {
   .btnAnchor {
     width: 50%;
     background-color: $color-secondary;
-    font-family: "texte";
+    font-family: Roboto;
+    font-weight: 500;
     text-align: center;
     vertical-align: middle;
     line-height: 55px;
@@ -103,7 +98,6 @@ form {
     height: 60px;
     border-radius: 30px;
     color: #fff;
-    font-weight: 600;
     background: linear-gradient(-10deg, $color-primary, 60%, $color-secondary);
     box-shadow: $shadow-btn;
   }
@@ -145,10 +139,10 @@ button:focus {
   box-shadow: none;
 }
 
-h2 {
-  font-family: "texte";
-  text-align: center;
-  font-weight: bold;
+.working {
+  font-family: Roboto;
+  // text-align: center;
+  font-weight: 700;
   font-size: 3vw;
   margin-left: 6%;
 }
@@ -187,7 +181,7 @@ h2 {
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-family: "texte";
+  font-family: Roboto;
   margin-left: -15px;
   width: 35px;
   height: 35px;
@@ -207,9 +201,10 @@ h2 {
   }
 
   h3 {
-    font-family: "textBold";
+    font-family: Roboto;
     font-size: 1.4vw;
     text-align: start;
+    font-weight: 500;
     width: 90%;
     // margin-left: 20px;
   }
@@ -228,6 +223,7 @@ h2 {
 }
 // restaurants container
 .restauTitle {
+  font-family: Roboto;
   background-color: $background-color;
   display: flex;
   flex-direction: column;
@@ -273,7 +269,7 @@ h2 {
 
   p {
     color: #008766;
-    font-family: "texte";
+    font-family: Roboto;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
@@ -291,18 +287,18 @@ h2 {
   }
 
   h3 {
-    font-family: "texte";
+    font-family: Roboto;
     font-size: 20px;
   }
 
   p {
-    font-family: "texte";
+    font-family: Roboto;
     font-size: 12px;
   }
 }
 
 .fa-heart {
-  font-size: 40px;
+  font-size: 30px;
 }
 .fa-heart:hover {
   font-weight: 900;
@@ -315,7 +311,8 @@ h2 {
   width: 20%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 15px;
 }
 footer {
   background-color: #353535;
@@ -328,7 +325,7 @@ footer {
 
 .footerContainer {
   color: #fff;
-  font-family: "texte";
+  font-family: Roboto;
   display: inline;
   align-content: flex-start;
 
@@ -364,6 +361,9 @@ footer {
   width: 60px;
   border-width: 5px;
   margin-left: 0px;
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 2em;
 }
 
 .menuContainer {
@@ -371,18 +371,21 @@ footer {
   margin-top: -60px;
   position: relative;
   border-radius: 50px 50px 0px 0px;
+  // background-color: red;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  h2 {
+  .titleMenu h2 {
     font-family: "title";
     font-size: 30px;
   }
 
   h3 {
-    font-family: "texte";
+    font-family: Roboto;
   }
 
   p {
-    font-family: "texte";
+    font-family: Roboto;
   }
 }
 
@@ -405,10 +408,6 @@ footer {
     width: 390px;
     margin: 0px 10px;
   }
-  .blockDish {
-    width: 30%;
-    background-color: saddlebrown;
-  }
 }
 
 .containerChoise {
@@ -428,25 +427,28 @@ footer {
 .choise {
   margin-top: 20px;
   border-radius: 15px;
+  padding-left: 10px;
   background-color: #fff;
   display: flex;
   align-content: center;
-  h3,
+  h3 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
   p {
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
   }
 
   .containerOrder {
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
   }
 
   .elips {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    width: 70%;
   }
 
   .inlineText {
@@ -465,39 +467,27 @@ footer {
     width: 3px;
     height: 3px;
     margin-left: -50px;
-    // display: none;
   }
 }
 
 .choise:hover {
-  // .inlineText {
-  //   width: 80%;
-  // }
+  .containerOrder {
+    @include widthcontainer;
+  }
+  .elips {
+    width: 250px;
+  }
   .checkIt {
     width: 20%;
     background-color: $color-tertiary;
     border-radius: 0px 15px 15px 0px;
-    animation: slide 0.2s linear;
+    @include slider;
   }
   .check {
     width: 20px;
     height: 20px;
     margin-left: 0px;
-    // display: inline-block;
-    animation: turn 0.4s reverse linear;
-  }
-  @keyframes slide {
-    from {
-      width: 0%;
-    }
-    to {
-      min-width: 50px;
-    }
-  }
-  @keyframes turn {
-    100% {
-      transform: rotate(-360deg);
-    }
+    @include rotate;
   }
 }
 
@@ -531,7 +521,10 @@ footer {
     text-align: left;
     font-size: 6vw;
   }
-
+  .working {
+    font-size: 5vw;
+    margin-left: 6%;
+  }
   .stepContainer {
     align-items: center;
     justify-content: center;
@@ -548,9 +541,8 @@ footer {
   }
 
   // restaurants container
-  .restauTitle {
-    margin-top: 4vh;
-    padding-bottom: 40px;
+  .restauTitle h2 {
+    margin-left: 40px;
   }
 
   .cardContainer {
@@ -560,33 +552,14 @@ footer {
   }
 
   .cardRestau {
-    background-color: #fff;
-    display: inline-block;
     width: 85%;
     max-width: 85%;
-    border-radius: 15px;
-    margin-top: 20px;
-
-    img {
-      width: 100%;
-      border-radius: 15px 15px 0px 0px;
-      border-style: none;
-    }
   }
 
   .newRestau {
-    position: absolute;
-    background-color: #99e2d0;
-    right: 0;
-    height: 35px;
-    padding: 0px 25px;
-    margin-right: 12vw;
-    margin-top: 20px;
-    border-radius: 3px;
-
     p {
       color: #008766;
-      font-family: "texte";
+      font-family: Roboto;
       text-align: center;
       font-size: 20px;
       font-weight: bold;
@@ -595,127 +568,28 @@ footer {
   }
 
   .cardText {
-    // background-color: blue;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-
-    section {
-      margin-left: 20px;
-    }
-
     h3 {
-      font-family: "texte";
-      font-size: 28px;
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 5px;
     }
 
     p {
-      font-family: "texte";
+      font-family: Roboto;
+      margin-top: 0px;
       font-size: 18px;
     }
   }
 
   .like {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      width: 30%;
-    }
-  }
-  footer {
-    background-color: #353535;
-    padding-top: 10%;
-    padding-bottom: 0%;
-    padding-left: 5%;
-    display: flex;
-    align-content: center;
-  }
-
-  .footerContainer {
-    color: #fff;
-    font-family: "texte";
-    display: inline;
-    align-content: flex-start;
-
-    .logoFooter {
-      width: 60%;
-      margin-bottom: 15px;
-    }
-
-    .containerPicto {
-      display: flex;
-      align-items: center;
-      height: 15%;
-    }
-    .picto {
-      width: 15px;
-    }
-    .textPicto {
-      margin-left: 12px;
-    }
-
-    .containerText {
-      margin-top: -10px;
+    .fa-heart {
+      font-size: 25px;
     }
   }
 
-  // templates
-  .imgContainer img {
-    width: 100%;
-  }
-
-  .tilde {
-    border-bottom: 3px solid $color-tertiary;
-    width: 60px;
-    border-width: 5px;
-    margin-left: 0px;
-  }
-
-  .menuContainer {
-    background-color: $background-color;
-    margin-top: -60px;
-    position: relative;
-    border-radius: 50px 50px 0px 0px;
-    padding: 5%;
-
-    h1 {
-      font-family: "title";
-      font-size: 30px;
-    }
-
-    h3 {
-      font-family: "texte";
-    }
-
-    p {
-      font-family: "texte";
-    }
-  }
-
-  .titleMenu {
-    display: flex;
-    justify-content: space-between;
-    img {
-      width: 30px;
-    }
-  }
-  .blockMenu {
-    min-width: 100%;
-    margin: 0px 0px;
-  }
-  .containerChoise {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-  }
-
-  .choise {
-    h3,
-    p {
-      margin: 10px;
+  .blockMenuContent {
+    .blockMenu {
+      width: 100%;
     }
   }
 }

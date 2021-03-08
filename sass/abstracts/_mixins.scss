@@ -1,22 +1,35 @@
-@mixin fadeIn {
-  //   animation: fadeIn ease 3s;
-  //   -webkit-animation: fadeIn ease 3s;
-  //   -moz-animation: fadeIn ease 3s;
-  //   -o-animation: fadeIn ease 3s;
-  //   -ms-animation: fadeIn ease 3s;
-  -webkit-transition: opacity 2s ease-in;
-  -ms-transition: opacity 2s ease-in;
-  -moz-transition: opacity 2s ease-in;
-  -o-transition: opacity 2s ease-in;
-  transition: opacity 2s ease-in;
-  margin-top: 20px;
-  clear: both;
+@mixin slider {
+  animation: slide 0.2s linear;
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+
+@mixin rotate {
+  animation: turn 0.4s reverse linear;
+}
+
+@mixin widthcontainer {
+  animation: containeur 0.4s linear;
+}
+
+@keyframes slide {
+  from {
+    width: 0%;
   }
+  to {
+    width: 80px;
+  }
+}
+
+@keyframes turn {
   100% {
-    opacity: 100%;
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes containeur {
+  from {
+    width: 100%;
+  }
+  to {
+    width: -50px;
   }
 }
