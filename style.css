@@ -17,7 +17,7 @@
     width: 100%;
   }
   to {
-    width: -50px;
+    width: 100%;
   }
 }
 @keyframes fadeinOne {
@@ -353,7 +353,6 @@ button:focus {
 .fa-heart:hover {
   font-weight: 900;
   background: linear-gradient(90deg, #ff79da 0%, #9356dc 62%);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
