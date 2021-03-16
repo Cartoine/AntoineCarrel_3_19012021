@@ -353,6 +353,7 @@ button:focus {
 .fa-heart:hover {
   font-weight: 900;
   background: linear-gradient(90deg, #ff79da 0%, #9356dc 62%);
+  background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
