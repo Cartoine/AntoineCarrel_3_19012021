@@ -399,6 +399,8 @@ footer {
     p {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       color: $color-tertiary;
+      text-align: center;
+      font-weight: 600;
     }
 
     img {
@@ -672,7 +674,9 @@ footer {
   .contact:active,
   .contact:hover {
     .msgContact {
-      width: 80%;
+      width: 90%;
+      margin-right: 15px;
+      margin-left: 15px;
     }
   }
 }

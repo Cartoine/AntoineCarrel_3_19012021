@@ -4,7 +4,7 @@
     width: 0%;
   }
   to {
-    width: 80px;
+    width: 20%;
   }
 }
 @keyframes turn {
@@ -424,6 +424,8 @@ footer {
 .contact:hover .msgContact p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #99e2d0;
+  text-align: center;
+  font-weight: 600;
 }
 .contact:active .msgContact img,
 .contact:hover .msgContact img {
@@ -669,7 +671,9 @@ footer {
 
   .contact:active .msgContact,
 .contact:hover .msgContact {
-    width: 80%;
+    width: 90%;
+    margin-right: 15px;
+    margin-left: 15px;
   }
 }
 
