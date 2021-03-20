@@ -11,3 +11,8 @@ $gradient-purple-red: linear-gradient(
   rgba(255, 121, 218, 1) 0%,
   rgba(147, 86, 220, 1) 62%
 );
+$gradient-reverse: linear-gradient(
+  90deg,
+  rgba(147, 86, 220, 1) 7%,
+  rgba(242, 5, 177, 1) 46%
+);
