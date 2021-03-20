@@ -106,7 +106,8 @@ form {
   .btnAnchor {
     &:hover,
     &:active {
-      box-shadow: none;
+      box-shadow: $shadow-btn-secondary;
+      background: $gradient-hover;
       cursor: pointer;
     }
   }
