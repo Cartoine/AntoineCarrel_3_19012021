@@ -17,181 +17,185 @@
         </header>
     </a>
     <!-- container input cherche -->
-<main>
-
-    <div>
-        <div>
-            <form>
-                <div class="inputContainer">
-                    <div>
-                        <img src="img/icn/map-marker-alt-solid.svg" alt="">
-                    </div>
-                    <input class="inputContaint" type="text" name="city" required placeholder="Paris, Belleville">
-                </div>
-            </form>
+    <main>
+        <div class="loadingContainer">
+            <img class="loader" src="img/icn/loading.png" alt="">
         </div>
-        <!-- container reserve the menu -->
-        <section class="booking">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins.</p>
-            <a href="#restaurants" class="btnAnchor">Explorer nos restaurants</a>
+    <div class="fadeinLoad">
+        <div>
+            <div>
+                <form>
+                    <div class="inputContainer">
+                        <div>
+                            <img src="img/icn/map-marker-alt-solid.svg" alt="">
+                        </div>
+                        <input class="inputContaint" type="text" name="city" required placeholder="Paris, Belleville">
+                    </div>
+                </form>
+            </div>
+            <!-- container reserve the menu -->
+            <section class="booking">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins.</p>
+                <a href="#restaurants" class="btnAnchor">Explorer nos restaurants</a>
                 <!-- <button>Explore nos restaurants</button> -->
+            </section>
+        </div>
+        <!-- container operation -->
+        <section>
+            <h2 class="working">Fonctionnement</h2>
+            <div class="stepContainer">
+                <!-- first step -->
+                <div class="steps">
+                    <div class="circle">
+                        <p>1</p>
+                    </div>
+                    <section class="operation">
+                        <div class="operationTitle">
+                            <i class="fas fa-mobile-alt iconeHover"></i>
+                            <h3>Choisissez un restaurant</h3>
+                        </div>
+                    </section>
+                </div>
+                <!-- second step -->
+                <div class="steps">
+                    <div class="circle">
+                        <p>2</p>
+                    </div>
+                    <section class="operation">
+                        <div class="operationTitle">
+                            <i class="fas fa-list-ul iconeHover"></i>
+                            <h3>Composez votre menu</h3>
+                        </div>
+                    </section>
+                </div>
+                <!-- third step -->
+                <div class="steps">
+                    <div class="circle">
+                        <p>3</p>
+                    </div>
+                    <section class="operation">
+                        <div class="operationTitle">
+                            <i class="fas fa-store iconeHover"></i>
+                            <h3>Dégustez au restaurant</h3>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!-- restaurants container -->
+        <section class="restauTitle" id="restaurants">
+            <h2 id="exploreRestaurants">Restaurants</h2>
+            
+            <!-- cards container -->
+            <div class="cardContainer">
+                <!-- first restaurant -->
+                <a class="cardRestau" href="templates/menilmontantMenu.html">
+                    <div>
+                        <div>
+                            <div class="newRestau">
+                                <p>Nouveau</p>
+                            </div>
+                            <img src="img/restaurants/Menilmontant.png" alt="Restaurant Menilmontant">
+                        </div>
+                        <div class="cardText">
+                            <section>
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </section>
+                            <div class="like" >
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- second restaurant -->
+                <a class="cardRestau" href="templates/charonneMenu.html">
+                    <div>
+                        <div>
+                            <div class="newRestau">
+                                <p>Nouveau</p>
+                            </div>
+                            <img class="imgRelou" src="img/restaurants/Charonne.png" alt="Restaurant Charonne">
+                        </div>
+                        <div class="cardText">
+                            <section>
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </section>
+                            <div class="like" >
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- third restaurant -->
+                <a class="cardRestau" href="templates/citeRougeMenu.html">
+                    <div>
+                        <div>
+                            <img src="img/restaurants/cite-rouge.png" alt="Restaurant Cité Rouge">
+                        </div>
+                        <div class="cardText">
+                            <section>
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </section>
+                            <div class="like" >
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- fourth restaurant -->
+                <a class="cardRestau" href="templates/foliCourtMenu.html">
+                    <div>
+                        <div>
+                            <img src="img/restaurants/folie-mericourt.png" alt="Restaurant folie Mericourt">
+                        </div>
+                        <div class="cardText">
+                            <section>
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </section>
+                            <div class="like" >
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </section>
     </div>
-        <!-- container operation -->
-    <section>
-        <h2 class="working">Fonctionnement</h2>
-        <div class="stepContainer">
-            <!-- first step -->
-            <div class="steps">
-                <div class="circle">
-                    <p>1</p>
-                </div>
-                <section class="operation">
-                    <div class="operationTitle">
-                        <i class="fas fa-mobile-alt iconeHover"></i>
-                        <h3>Choisissez un restaurant</h3>
-                    </div>
-                </section>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="footerContainer">
+            <img class="logoFooter" src="img/logo/ohmyfood@2x.svg" alt="logo">
+            <div class="containerPicto">
+                <img class="picto" src="img/icn/utensils.svg" alt="ustensils">
+                <p class="textPicto">Proposer un restaurant</p>
             </div>
-            <!-- second step -->
-            <div class="steps">
-                <div class="circle">
-                    <p>2</p>
-                </div>
-                <section class="operation">
-                    <div class="operationTitle">
-                        <i class="fas fa-list-ul iconeHover"></i>
-                        <h3>Composez votre menu</h3>
-                    </div>
-                </section>
+            <div class="containerPicto">
+                <img class="picto" src="img/icn/hands.svg" alt="hands">
+                <p class="textPicto">Devenir partenaire</p>
             </div>
-            <!-- third step -->
-            <div class="steps">
-                <div class="circle">
-                    <p>3</p>
-                </div>
-                <section class="operation">
-                    <div class="operationTitle">
-                        <i class="fas fa-store iconeHover"></i>
-                        <h3>Dégustez au restaurant</h3>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </section>
-    <!-- restaurants container -->
-    <section class="restauTitle" id="restaurants">
-        <h2 id="exploreRestaurants">Restaurants</h2>
-        
-        <!-- cards container -->
-        <div class="cardContainer">
-            <!-- first restaurant -->
-            <a class="cardRestau" href="templates/menilmontantMenu.html">
-                <div>
-                    <div>
-                        <div class="newRestau">
-                            <p>Nouveau</p>
+            <div class="containerText">
+                <p>Mentions légales</p>
+                <div class="contact">
+                    <p class="contact">contact</p>
+                    <div class="msgContact">
+                        <div>
+                            <p>
+                                mail envoyé à contact@ohmyfood.com
+                            </p>
                         </div>
-                        <img src="img/restaurants/Menilmontant.png" alt="Restaurant Menilmontant">
-                    </div>
-                    <div class="cardText">
-                        <section>
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
-                        </section>
-                        <div class="like" >
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!-- second restaurant -->
-            <a class="cardRestau" href="templates/charonneMenu.html">
-                <div>
-                    <div>
-                        <div class="newRestau">
-                            <p>Nouveau</p>
-                        </div>
-                        <img class="imgRelou" src="img/restaurants/Charonne.png" alt="Restaurant Charonne">
-                    </div>
-                    <div class="cardText">
-                        <section>
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
-                        </section>
-                        <div class="like" >
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!-- third restaurant -->
-            <a class="cardRestau" href="templates/citeRougeMenu.html">
-                <div>
-                    <div>
-                        <img src="img/restaurants/cite-rouge.png" alt="Restaurant Cité Rouge">
-                    </div>
-                    <div class="cardText">
-                        <section>
-                            <h3>À la française</h3>
-                            <p>Cité Rouge</p>
-                        </section>
-                        <div class="like" >
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!-- fourth restaurant -->
-            <a class="cardRestau" href="templates/foliCourtMenu.html">
-                <div>
-                    <div>
-                        <img src="img/restaurants/folie-mericourt.png" alt="Restaurant folie Mericourt">
-                    </div>
-                    <div class="cardText">
-                        <section>
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
-                        </section>
-                        <div class="like" >
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
-</main>
-        <!-- footer -->
-        <footer>
-            <div class="footerContainer">
-                <img class="logoFooter" src="img/logo/ohmyfood@2x.svg" alt="logo">
-                <div class="containerPicto">
-                    <img class="picto" src="img/icn/utensils.svg" alt="ustensils">
-                    <p class="textPicto">Proposer un restaurant</p>
-                </div>
-                <div class="containerPicto">
-                    <img class="picto" src="img/icn/hands.svg" alt="hands">
-                    <p class="textPicto">Devenir partenaire</p>
-                </div>
-                <div class="containerText">
-                    <p>Mentions légales</p>
-                    <div class="contact">
-                        <p class="contact">contact</p>
-                        <div class="msgContact">
-                            <div>
-                                <p>
-                                    mail envoyé à contact@ohmyfood.com
-                                </p>
-                            </div>
-                            <div class="mailCheck">
-                                <img class="" src="img/icn/send.png" alt="check">
-                            </div>
+                        <div class="mailCheck">
+                            <img class="" src="img/icn/send.png" alt="check">
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </body>
-    </html>
+        </div>
+    </footer>
+</body>
+</html>

@@ -12,12 +12,28 @@
     transform: rotate(-360deg);
   }
 }
+@keyframes load {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    display: none;
+  }
+}
 @keyframes containeur {
   from {
     width: 100%;
   }
   to {
     width: 100%;
+  }
+}
+@keyframes fadeinLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 @keyframes fadeinOne {
@@ -133,6 +149,7 @@ form input {
   width: 50%;
   background-color: #ff79da;
   font-family: Roboto;
+  font-size: 2vw;
   font-weight: 500;
   text-align: center;
   vertical-align: middle;
@@ -166,13 +183,30 @@ button {
 }
 
 button:hover, button:active {
-  box-shadow: none;
+  box-shadow: 0px 5px 5px 2px rgba(10, 9, 9, 0.272);
+  background: linear-gradient(-10deg, #9760d9, 60%, #ff79d9d3);
   cursor: pointer;
 }
 
-button:focus {
-  outline: none;
-  box-shadow: none;
+.loadingContainer {
+  position: absolute;
+  width: 100%;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  z-index: -100;
+}
+.loadingContainer .loader {
+  width: 10%;
+  height: 10%;
+  animation: load 1s;
+  z-index: -10;
+}
+
+.fadeinLoad {
+  animation: fadeinLoad;
+  animation-delay: 0s;
+  animation-duration: 3s;
 }
 
 .fadeinOne {
@@ -352,7 +386,7 @@ button:focus {
 
 .fa-heart:hover {
   font-weight: 900;
-  background: linear-gradient(90deg, #ff79da 0%, #9356dc 62%);
+  background: linear-gradient(-10deg, #9356dc, 60%, #ff79da);
   background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -595,6 +629,13 @@ footer {
   }
   .booking p {
     font-size: 4vw;
+  }
+  .booking .btnAnchor {
+    font-size: 3vw;
+  }
+
+  .loadingContainer {
+    margin-top: 50%;
   }
 
   h2 {

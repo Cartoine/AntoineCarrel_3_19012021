@@ -10,6 +10,16 @@
   animation: containeur 0.4s linear;
 }
 
+@mixin load {
+  animation: load 1s;
+}
+
+@mixin fadeinLoad {
+  animation: fadeinLoad;
+  animation-delay: 0s;
+  animation-duration: 3s;
+}
+
 @mixin fadeinOne {
   animation: fadeinOne 2s;
   animation-delay: 0.5s;
@@ -45,12 +55,30 @@
   }
 }
 
+@keyframes load {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    display: none;
+  }
+}
+
 @keyframes containeur {
   from {
     width: 100%;
   }
   to {
     width: 100%;
+  }
+}
+
+@keyframes fadeinLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
