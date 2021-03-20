@@ -508,7 +508,7 @@ footer {
     @include rotate;
   }
 }
-.choise:focus {
+.choise:active {
   .containerOrder {
     @include widthcontainer;
   }
