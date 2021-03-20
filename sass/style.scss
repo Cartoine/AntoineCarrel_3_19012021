@@ -508,7 +508,26 @@ footer {
     @include rotate;
   }
 }
-
+.choise:focus {
+  .containerOrder {
+    @include widthcontainer;
+  }
+  .elips {
+    width: 250px;
+  }
+  .checkIt {
+    width: 20%;
+    background-color: $color-tertiary;
+    border-radius: 0px 15px 15px 0px;
+    @include slider;
+  }
+  .check {
+    width: 20px;
+    height: 20px;
+    margin-left: 0px;
+    @include rotate;
+  }
+}
 .btnOrder {
   display: flex;
   justify-content: center;

@@ -521,6 +521,25 @@ footer {
   animation: turn 0.4s reverse linear;
 }
 
+.choise:focus .containerOrder {
+  animation: containeur 0.4s linear;
+}
+.choise:focus .elips {
+  width: 250px;
+}
+.choise:focus .checkIt {
+  width: 20%;
+  background-color: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+  animation: slide 0.2s linear;
+}
+.choise:focus .check {
+  width: 20px;
+  height: 20px;
+  margin-left: 0px;
+  animation: turn 0.4s reverse linear;
+}
+
 .btnOrder {
   display: flex;
   justify-content: center;
