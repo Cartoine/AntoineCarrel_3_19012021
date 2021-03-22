@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@keyframes heart {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+    transform: scale(2);
+  }
+}
 @keyframes slide {
   from {
     width: 0%;
@@ -385,12 +394,14 @@ button:hover, button:active {
   font-size: 30px;
 }
 
-.fa-heart:hover {
+.fa-heart:hover,
+.fa-heart:active {
   font-weight: 900;
   background: linear-gradient(-10deg, #9356dc, 60%, #ff79da);
   background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: heart 0.5s;
 }
 
 .like {

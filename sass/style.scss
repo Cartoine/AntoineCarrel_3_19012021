@@ -344,13 +344,17 @@ button {
 .fa-heart {
   font-size: 30px;
 }
-.fa-heart:hover {
+
+.fa-heart:hover,
+.fa-heart:active {
   font-weight: 900;
   background: $gradient-purple-red;
   background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @include heart;
 }
+
 .like {
   width: 20%;
   display: flex;

@@ -39,7 +39,23 @@
   animation: fadeinFour 2s;
   animation-delay: 2s;
 }
+@mixin heart {
+  animation: heart 0.5s;
+  // transform: scalex(2);
+}
 
+@keyframes heart {
+  from {
+    height: 0%;
+    // width: 0%;
+  }
+  to {
+    height: 100%;
+    transform: scale(2);
+    // width: 100%;
+    // font-size: 30px;
+  }
+}
 @keyframes slide {
   from {
     width: 0%;
